@@ -15,7 +15,7 @@ def email_exists(form,field):
 
 class RegisterForm(Form):
 	username = StringField(
-		'Username',
+		'Имя пользователя',
 		validators=[
 			DataRequired(),
 			Regexp(
@@ -26,7 +26,7 @@ class RegisterForm(Form):
 		])
 
 	email = StringField(
-		'Email',
+		'Почта',
 		validators=[
 			DataRequired(),
 			Email(),
@@ -34,21 +34,21 @@ class RegisterForm(Form):
 		])
 
 	password = PasswordField(
-		'Password',
+		'Пароль',
 		validators=[
 			DataRequired(),
 			Length(min=2),
 			EqualTo('password2', message = 'Пароли должны совпадать!')
 		])
 	password2 = PasswordField(
-		'Подтвердите пароль',
+		'Подтвердите П@$$w0rd',
 		validators=[DataRequired()
 		])
 
 
 class LoginForm(Form):
-	email = StringField('Email', validators=[DataRequired(), Email()])
-	password = PasswordField('Password', validators=[DataRequired()])
+	email = StringField('Почти', validators=[DataRequired(), Email()])
+	password = PasswordField('Пароль', validators=[DataRequired()])
 
 class PostForm(Form):
 	content = TextAreaField("Что у Вас нового?", validators = [DataRequired()])

@@ -2,10 +2,6 @@ import datetime
 
 from flask_bcrypt import generate_password_hash
 from flask_login import UserMixin
-"""Flask have an ecosystem where package gets installed to this ext(external area)
-module. and inside of that we get the package.
-Read About UserMixin - 'http://flask-login.readthedocs.org/en/latest/#your-user-class'
-"""
 
 from peewee import *
 
